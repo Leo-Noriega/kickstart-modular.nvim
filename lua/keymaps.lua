@@ -5,6 +5,15 @@
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- MY KEYBINDS CUSTOM KEYBINDS
+vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>', { desc = 'Open file explorer dir view' })
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected line down' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selected line up' })
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Move down half page and center' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Move up half page and center' })
+vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Move to next search result and center' })
+vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Move to previous search result and center' })
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
